@@ -25,10 +25,8 @@ const config: Config = {
         accent: "#F13024",
       },
       backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
-        circles: 'url("/bg-circles.png")',
-        circleStar: 'url("/circle-star.svg")',
-        site: 'url("/site-bg.svg")',
+        mainbg: "linear-gradient(to bottom,  #2b5876 , #4e4376 )",
+        primaryGradient: "linear-gradient(to right, #3B82F5, #22c55e)",
       },
       animation: {
         "spin-slow": "spin 6s linear infinite",

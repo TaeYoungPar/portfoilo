@@ -3,7 +3,6 @@
 import { Sora } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
-import TopLeftImg from "./components/TopLeftImg";
 import Header from "./components/Header";
 import PageAnimatePresence from "./components/PageAnimatePresence";
 
@@ -21,9 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+        className={`page bg-mainbg text-white ${sora.variable} font-sora relative`}
       >
-        <TopLeftImg />
         <Nav />
         <Header />
         <PageAnimatePresence>{children}</PageAnimatePresence>

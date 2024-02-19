@@ -12,7 +12,7 @@ const Header = () => {
               src={"/logo.png"}
               width={220}
               height={48}
-              alt=""
+              alt="태영이 이름"
               priority={true}
             />
           </Link>

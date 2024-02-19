@@ -1,15 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
-import ProjectBtn from "./components/ProjectBtn";
 import { fadeIn } from "@/variants";
 import Avatar from "./components/Avatar";
-import Pacticles from "./components/Pacticles";
+import Link from "next/link";
+import Button from "./components/Button";
 
 export default function Home() {
   return (
-    <div className=" bg-primary/60 h-full">
-      <div className="w-full h-screen  bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+    <div className=" h-full">
+      <div className="w-full h-screen">
+        <div className="text-center flex flex-col justify-center  xl:pt-40 xl:text-left h-full container mx-auto">
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
@@ -17,49 +17,50 @@ export default function Home() {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into
-            <span className=" text-accent">Digital Reality</span>
+            안녕하세요 <br /> 언제나 즐겁게 즐길 줄 아는 <br />
+            프론트엔드 개발자
+            <br />
+            <span className=" bg-primaryGradient text-transparent bg-clip-text">
+              박태영입니다.
+            </span>
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-lg mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            recusandae nihil alias inventore sit iusto repellat omnis molestias
-            excepturi suscipit nobis numquam eum vero accusamus voluptatum
-            minima quod consectetur facilis.
+            프론트엔드 개발에서 사용되는 프로그래밍 언어를 통해 시각적으로
+            매력적이고 상호작용성 있는 웹 어플리케이션을 구현하는 것이 제
+            즐거움입니다. 오류와 문제에 직면하더라도 극복하며 성취감을 느끼며,
+            이러한 과정에서 개발의 흥미를 더욱 높이고 있습니다.
           </motion.p>
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectBtn />
-          </div>
           <motion.div
-            variants={fadeIn("down", 0.4)}
+            variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex"
+            className=" xl:max-w-sm xl:mx-0 mb-10 xl:mb-16 cursor-pointer sm:w-full"
           >
-            <ProjectBtn />
+            <Link href={"/work"}>
+              <Button>View All Project</Button>
+            </Link>
+            <Button>Contact</Button>
           </motion.div>
         </div>
       </div>
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
-        <Pacticles />
-        <motion.div
-          variants={fadeIn("up", 0.5)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[640px] max-h-[600px] absolute lg:bottom-10 lg:right-[8%] "
-        >
-          <Avatar />
-        </motion.div>
-      </div>
+
+      <motion.div
+        variants={fadeIn("up", 0.5)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="w-full h-full max-w-[640px] max-h-[600px] absolute  z-negative lg:bottom-10 lg:right-[8%] "
+      >
+        <Avatar />
+      </motion.div>
     </div>
   );
 }

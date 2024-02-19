@@ -14,8 +14,8 @@ const PageAnimatePresence: React.FC<React.PropsWithChildren> = ({
     <AnimatePresence mode="wait">
       <motion.div key={pathname}>
         <Transition />
-        <FrozenRoute>{children}</FrozenRoute>
       </motion.div>
+      <FrozenRoute>{children}</FrozenRoute>
     </AnimatePresence>
   );
 };
