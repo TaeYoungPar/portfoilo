@@ -57,7 +57,7 @@ export default function Home() {
         animate="show"
         exit="hidden"
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="w-full h-full max-w-[640px] max-h-[600px] absolute  z-negative lg:bottom-10 lg:right-[8%] "
+        className="w-full h-full max-w-[640px] max-h-[600px] absolute   z-negative lg:bottom-10 lg:right-[8%] "
       >
         <Avatar />
       </motion.div>

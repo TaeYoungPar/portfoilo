@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-1">
           <Link href={"/"}>
             <Image
-              src={"/logo.png"}
+              src={"/images/logo.png"}
               width={220}
               height={48}
               alt="태영이 이름"

@@ -1,24 +1,20 @@
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   HiHome,
-  HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
+  HiMiniBookOpen,
 } from "react-icons/hi2";
 
 export const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
-  {
-    name: "testimonials",
-    path: "/testimonials",
-    icon: <HiChatBubbleBottomCenterText />,
-  },
+  { name: "skills", path: "/skill", icon: <HiRectangleGroup /> },
+  { name: "activity", path: "/activity", icon: <HiMiniBookOpen /> },
+  { name: "project", path: "/project", icon: <HiViewColumns /> },
+
   {
     name: "contact",
     path: "/contact",
